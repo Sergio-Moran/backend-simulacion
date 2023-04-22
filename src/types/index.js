@@ -1,5 +1,6 @@
 import { DataTypes } from "./Data.js";
 import { ProductTypes } from "./Product.js";
+import { BillTypes } from "./Bill.js";
 
 const GlobalTypes = `#graphql
 scalar DateTime
@@ -12,4 +13,4 @@ scalar DateTime
     }
 `;
 
-export default [GlobalTypes, DataTypes, ProductTypes];
+export default [GlobalTypes, DataTypes, ProductTypes, BillTypes];
