@@ -42,4 +42,56 @@ const Data = sequelize.define(
   }
 );
 
-export { sequelize, Data };
+const Product = sequelize.define(
+  "Product",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    name: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+    },
+    cost: {
+      type: DataTypes.FLOAT(7, 2),
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.FLOAT(7, 2),
+      allowNull: false,
+    },
+  },
+  {
+    tableName: "product",
+    timestamps: false,
+  }
+);
+
+const Bill = sequelize.define(
+  "Bill",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    name: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+    },
+    cost: {
+      type: DataTypes.FLOAT(7, 2),
+      allowNull: false,
+    },
+  },
+  {
+    tableName: "bill",
+    timestamps: false,
+  }
+);
+
+export { sequelize, Data, Product, Bill};

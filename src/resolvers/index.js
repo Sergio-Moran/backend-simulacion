@@ -1,4 +1,5 @@
 import { DataResolver } from "./Data.js";
+import { ProductResolver } from "./Product.js";
 
 const GlobalResolver = {
   Query: {
@@ -9,4 +10,4 @@ const GlobalResolver = {
   },
 };
 
-export default [GlobalResolver, DataResolver];
+export default [GlobalResolver, DataResolver, ProductResolver];
