@@ -5,12 +5,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "migrate":"node ./migrations.js"
+    "start": "nodemon -r dotenv/config index.js",
+    "migrate": "node -r dotenv/config ./src/db/migrations.js"
   },
   "dependencies": {
     "@apollo/server": "^4.6.0",
     "@graphql-tools/schema": "^9.0.18",
+    "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "graphql-scalars": "^1.21.3",
     "mysql2": "^3.2.3",

@@ -1,17 +1,15 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import typeDefs from "./src/types/index.js";
 import resolvers from "./src/resolvers/index.js";
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({
-  schema
+  schema,
 });
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:

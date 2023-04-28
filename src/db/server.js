@@ -1,11 +1,13 @@
 import { Sequelize, DataTypes } from "sequelize";
 
+console.log({ name: process.env.DB_NAME });
+
 const sequelize = new Sequelize(
-  "db-simulacion",
-  "root",
-  "geologiaEstructural",
+  process.env.DB_NAME || "",
+  process.env.DB_USER || "",
+  process.env.DB_PASSWORD || "",
   {
-    host: "localhost",
+    host: process.env.DB_HOST || "",
     dialect: "mysql",
   }
 );
@@ -94,4 +96,4 @@ const Bill = sequelize.define(
   }
 );
 
-export { sequelize, Data, Product, Bill};
+export { sequelize, Data, Product, Bill };

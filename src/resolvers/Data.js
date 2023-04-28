@@ -1,4 +1,4 @@
-import { Data, sequelize } from "../../server.js";
+import { Data, sequelize } from "../db/server.js";
 
 const DataResolver = {
   Query: {

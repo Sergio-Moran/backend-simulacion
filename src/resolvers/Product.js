@@ -1,4 +1,4 @@
-import { Product } from "../../server.js";
+import { Product } from "../db/server.js";
 
 const ProductResolver = {
   Query: {
