@@ -1,7 +1,5 @@
 import { Sequelize, DataTypes } from "sequelize";
 
-console.log({ name: process.env.DB_NAME });
-
 const sequelize = new Sequelize(
   process.env.DB_NAME || "",
   process.env.DB_USER || "",
